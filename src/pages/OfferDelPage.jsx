@@ -49,7 +49,7 @@ export const OfferDelPage = () => {
 
     if (!offer) {
         return (
-            <div className="main wrapper">
+            <div className="main">
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>
