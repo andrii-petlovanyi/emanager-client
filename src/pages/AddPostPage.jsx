@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { Footer } from '../components/Footer';
 import '../index.css'
 import { createPost } from '../redux/features/post/postSlice';
 
@@ -39,7 +40,10 @@ export const AddPostPage = () => {
     }
 
     if (!user) {
-        return<div className='main'>Авторизуйтесь</div>
+        return <div className='main'>
+            Авторизуйтесь
+            <Footer/>
+        </div>
     }
     
     return (

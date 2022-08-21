@@ -9,6 +9,7 @@ import { removeOffer } from '../redux/features/offer/offerSlice';
 import { toast } from 'react-toastify'
 import { AiFillCaretLeft } from 'react-icons/ai';
 import Moment from 'react-moment';
+import { Footer } from '../components/Footer';
 
 export const OfferDelPage = () => {
 
@@ -40,7 +41,11 @@ export const OfferDelPage = () => {
     }, [fetchOffer])
 
     if (!user) {
-        return<div className='main'>Авторизуйтесь</div>
+        return (
+            <div className='main'>
+                Авторизуйтесь
+                <Footer/>
+            </div>)
     }
 
     if (!offer) {
@@ -62,7 +67,7 @@ export const OfferDelPage = () => {
                 <li className='offer-initials'><label>Дата: </label><Moment date={new Date(offer.Date*1000)} format='D MMM YYYY' className="postData"/></li>
                 <li className="offer-initials"><label>Ім'я: </label>{offer.FirstName}</li>
                 <li className="offer-initials"><label>Прізвище: </label>{offer.LastName}</li>
-                <li className="offer-initials"><label>Нікнейм: </label>{}</li>
+                <li className="offer-initials"><label>Нікнейм: </label>{offer.Username}</li>
             </ul>       
             <div className='offer-nav'>
                 <button className='btn-del' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>

@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import '../index.css'
 import { updatePost } from '../redux/features/post/postSlice';
 import { toast } from 'react-toastify';
+import { Footer } from '../components/Footer';
 
 export const EditPostPage = () => {
 
@@ -51,7 +52,11 @@ export const EditPostPage = () => {
     }, [fetchPost])
 
     if (!user) {
-        return<div className='main'>Авторизуйтесь</div>
+        return (
+            <div className='main'>
+                Авторизуйтесь
+                <Footer/>
+            </div>)
     }
 
 

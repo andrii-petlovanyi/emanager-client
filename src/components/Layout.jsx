@@ -6,7 +6,8 @@ export const Layout = ({ children }) => {
     return (
         <React.Fragment>
                 <Navbar />
-                    {children}
+                {children}
+                       
         </React.Fragment>
     )
 }

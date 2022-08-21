@@ -31,7 +31,8 @@ export const LoginPage = () => {
     }
 
     return (
-        <div className='login-page'>
+        <div>
+            <div className='login-page'>
                 <h1 className='login-form-title'>Авторизація</h1>
                 <form onSubmit={e => e.preventDefault()} className='login-form'>
                     <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='Ваш логін' className='login-form-input' />
@@ -41,5 +42,9 @@ export const LoginPage = () => {
                         <Link to='/register' className='link-login'>Реєстрація</Link>
                     </div>
                 </form>
+            </div>
+            <div className='nav-footer'>
+                <a href='http://impam.vercel.app' rel=''>2022 &copy; A. Petlovanii</a>
+            </div>
         </div>
 )}

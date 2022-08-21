@@ -309,14 +309,14 @@ body {
 }
 
 .offer-card li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   margin: 16px 0;
 }
 
 .offer-model {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-width: 210px;
   padding: 15px 20px;
   border-radius: 10px;
@@ -709,4 +709,25 @@ body {
   left: auto;
   right: 15%;
   animation-delay: .3s;
+}
+
+/* // Footer & cop // */
+
+.nav-footer {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: #b2b2b255;
+}
+
+.on-main {
+  margin-top: 50%;
 }
