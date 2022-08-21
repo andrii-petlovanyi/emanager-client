@@ -484,8 +484,8 @@ body {
 
 .login-page {
   max-width: 450px;
-  margin: 6% auto;
-  padding: 20px 40px;
+  margin: 8% auto;
+  padding: 20px 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -728,6 +728,12 @@ body {
   color: #b2b2b255;
 }
 
-.on-main {
-  margin-top: 80%;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
+}
+
+.top {
+  flex-grow: 1;
 }

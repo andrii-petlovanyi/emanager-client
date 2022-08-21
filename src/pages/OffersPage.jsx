@@ -18,12 +18,11 @@ export const OffersPage = () => {
     }, [dispatch])
     
 
-     if (!user) {
-         return (
-             <div className='main'>
-                 Авторизуйтесь
-                 <Footer/>
-             </div>)
+ if (!user) {
+        return <div className='main wrapper'>
+            <span className='top'>Авторизуйтесь</span>
+            <Footer/>
+        </div>
     }
 
     if (!offers.length) {

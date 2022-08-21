@@ -31,7 +31,6 @@ export const LoginPage = () => {
     }
 
     return (
-        <div>
             <div className='login-page'>
                 <h1 className='login-form-title'>Авторизація</h1>
                 <form onSubmit={e => e.preventDefault()} className='login-form'>
@@ -43,8 +42,4 @@ export const LoginPage = () => {
                     </div>
                 </form>
             </div>
-            <div className='nav-footer'>
-                <a href='http://impam.vercel.app' rel=''>2022 &copy; A. Petlovanii</a>
-            </div>
-        </div>
 )}

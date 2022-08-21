@@ -52,11 +52,10 @@ export const EditPostPage = () => {
     }, [fetchPost])
 
     if (!user) {
-        return (
-            <div className='main'>
-                Авторизуйтесь
-                <Footer/>
-            </div>)
+        return <div className='main wrapper'>
+            <span className='top'>Авторизуйтесь</span>
+            <Footer/>
+        </div>
     }
 
 

@@ -18,8 +18,8 @@ export const MainPage = () => {
     }, [dispatch])
     
     if (!user) {
-        return <div className='main'>
-            Авторизуйтесь
+        return <div className='main wrapper'>
+            <span className='top'>Авторизуйтесь</span>
             <Footer/>
         </div>
     }

@@ -40,10 +40,6 @@ export const RegisterPage = () => {
                     <Link to='/login' className='link-login'>Вже зареєстровані?</Link>
                 </div>
             </form>
-            <div className='nav-footer'>
-                <a href='http://impam.vercel.app' rel=''>2022 &copy; A. Petlovanii</a>
-            </div>
         </div>
-    
         )
 }
