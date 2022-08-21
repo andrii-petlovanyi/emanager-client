@@ -285,6 +285,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 /* // Offer Item card on Offers page// */

@@ -8,6 +8,7 @@ import { AiFillDelete } from 'react-icons/ai';
 import { removeOffer } from '../redux/features/offer/offerSlice';
 import { toast } from 'react-toastify'
 import { AiFillCaretLeft } from 'react-icons/ai';
+import Moment from 'react-moment';
 
 export const OfferDelPage = () => {
 
@@ -58,7 +59,7 @@ export const OfferDelPage = () => {
             </div>        
             <ul className="offer-card">
                 <li className="offer-model">{offer.model}</li>
-                {/* <Moment date={offer.Date} format='D MMM YYYY' className="postData"/> */}
+                <li className='offer-initials'><label>Дата: </label><Moment date={new Date(offer.Date*1000)} format='D MMM YYYY' className="postData"/></li>
                 <li className="offer-initials"><label>Ім'я: </label>{offer.FirstName}</li>
                 <li className="offer-initials"><label>Прізвище: </label>{offer.LastName}</li>
                 <li className="offer-initials"><label>Нікнейм: </label>{}</li>
