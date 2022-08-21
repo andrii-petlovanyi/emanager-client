@@ -66,7 +66,7 @@ export const Navbar = () => {
                             style={({ isActive }) => isActive ? activeStyle : undefined}
                             >Прохання</NavLink>
                             
-                        <button className='btn-out'>Вихід</button>
+                        <button onClick={logoutHandler} className='btn-out'>Вихід</button>
                         <button className='nav-btn nav-close-btn' onClick={showNavbar}><FaTimes size={23}/></button>
                                 
                     </nav>
