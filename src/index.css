@@ -340,7 +340,7 @@ body {
   flex-direction: column;
   justify-content: center;
   max-width: 325px;
-  margin: 20px auto;
+  margin: 3% auto;
   border: 2px solid var(--item-block-border);
   padding: 25px;
   border-radius: 20px;
