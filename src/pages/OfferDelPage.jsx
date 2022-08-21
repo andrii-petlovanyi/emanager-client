@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { AiFillDelete } from 'react-icons/ai';
 import { removeOffer } from '../redux/features/offer/offerSlice';
 import { toast } from 'react-toastify'
-import { AiOutlineStar } from 'react-icons/ai'
+import { AiFillCaretLeft } from 'react-icons/ai';
 
 export const OfferDelPage = () => {
 
@@ -47,27 +47,20 @@ export const OfferDelPage = () => {
         )
     }
     return (
-        <div className='postViewMain'>
-            <div>
-                <button className='btn_enter'><Link className='link-item' to={'/offers'}>Назад</Link> </button>
-            </div>
-                    
-            <section className="postView">
-                <div className="postHeader">
-                    <h3 className="postTitle"><AiOutlineStar size={25} style={{ marginRight:'10px'}} />{offer.model}</h3>
-                    {/* <Moment date={offer.Date} format='D MMM YYYY' className="postData"/> */}
+        <div className='offer-del-page'>
+            <div className='offer-nav'>
+                <button className='btn-back'><Link className='link-back' to={'/offers'}><AiFillCaretLeft size={25} /></Link></button>
+            </div>        
+            <ul className="offer-card">
+                <li className="offer-model">{offer.model}</li>
+                {/* <Moment date={offer.Date} format='D MMM YYYY' className="postData"/> */}
+                <li className="offer-initials"><label>Ім'я: </label>{offer.FirstName}</li>
+                <li className="offer-initials"><label>Прізвище: </label>{offer.LastName}</li>
+                <li className="offer-initials"><label>Нікнейм: </label>{}</li>
+            </ul>       
+                <div className='btnViewNav'>
+                    <button className='btn-edit' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
                 </div>
-                <div className="postBlock">
-                    <div className="postBlockUrl"><p>{offer.FirstName}</p></div>
-                    <div className="postBlockUrl"><p>{offer.LastName}</p></div>
-                </div>
-            </section>       
-            <div>
-                
-                    <div className='btnViewNav'>
-                        <button className='btn-edit' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
-                    </div>
-            </div>  
         </div>
         )
 }

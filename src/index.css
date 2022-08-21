@@ -238,7 +238,9 @@ body {
 }
 
 .btn-edit:hover,
-.btn-edit:focus {
+.btn-edit:focus,
+.btn-back:hover,
+.btn-back:focus {
   cursor: pointer;
   border: 1px solid var(--hover-button-color);
 }
@@ -259,6 +261,24 @@ body {
   border: 1px solid #fff;
 }
 
+.btn-back {
+  width: 60px;
+  height: 40px;
+  background: rgba(166, 168, 168, 15%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-text-color);
+  border-radius: 3px;
+  color: var(--main-text-color);
+}
+
+.btn-back .link-back{
+  padding-right: 4px;
+  display: flex;
+  align-items: center;
+  color: var(--main-text-color);
+}
 /* // Offers page // */
 
 .offers {
@@ -312,9 +332,37 @@ body {
 
 
 /* // Offers Delete page // */
+.offer-del-page {
+  max-width: 900px;
+  margin: 20px auto;
+  border: 2px solid var(--item-block-border);
+  padding: 30px;
+  border-radius: 20px;
+}
 
+.offer-del-page li:nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
 
+.offer-del-page li {
+  display: flex;
+  justify-content: flex-start;
+}
 
+.offer-del-page label {
+  margin-right: 10px;
+  color:#cBa5e9ee;
+}
+
+.offer-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.offer-del-page .offer-card {
+  min-width: 300px;
+}
 
 
 
@@ -343,8 +391,8 @@ body {
 
 .login-page {
   max-width: 450px;
-  margin: 0 auto;
-  padding-bottom: 40px;
+  margin: 6% auto;
+  padding: 20px 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
