@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from '../utils/axios';
 import '../index.css'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { AiFillDelete } from 'react-icons/ai';
 import { removeOffer } from '../redux/features/offer/offerSlice';
 import { toast } from 'react-toastify'
@@ -15,6 +15,7 @@ export const OfferDelPage = () => {
     const params = useParams()
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const { user } = useSelector((state) => state.auth) 
 
     const removeOfferHandler = () => {
         try {
@@ -37,9 +38,13 @@ export const OfferDelPage = () => {
         fetchOffer()
     }, [fetchOffer])
 
+    if (!user) {
+        return<div className='main'>Авторизуйтесь</div>
+    }
+
     if (!offer) {
         return (
-            <div className="postViewMain wrapper">
+            <div className="main wrapper">
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>
@@ -49,7 +54,7 @@ export const OfferDelPage = () => {
     return (
         <div className='offer-del-page'>
             <div className='offer-nav'>
-                <button className='btn-back'><Link className='link-back' to={'/offers'}><AiFillCaretLeft size={25} /></Link></button>
+                <Link to={'/offers'}><button className='btn-back'><AiFillCaretLeft size={20} /></button></Link>
             </div>        
             <ul className="offer-card">
                 <li className="offer-model">{offer.model}</li>
@@ -58,8 +63,8 @@ export const OfferDelPage = () => {
                 <li className="offer-initials"><label>Прізвище: </label>{offer.LastName}</li>
                 <li className="offer-initials"><label>Нікнейм: </label>{}</li>
             </ul>       
-                <div className='btnViewNav'>
-                    <button className='btn-edit' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
+                <div className='offer-nav'>
+                    <button className='btn-del' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
                 </div>
         </div>
         )

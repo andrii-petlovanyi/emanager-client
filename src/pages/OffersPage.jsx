@@ -18,11 +18,11 @@ export const OffersPage = () => {
     
 
      if (!user) {
-        return<div className='postViewMain'>Авторизуйтесь</div>
+        return<div className='main'>Авторизуйтесь</div>
     }
 
     if (!offers.length) {
-        return <div className='postViewMain'>Записи відсутні</div>
+        return <div className='main'>Записи відсутні</div>
     }
     
 

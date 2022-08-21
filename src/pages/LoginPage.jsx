@@ -38,7 +38,7 @@ export const LoginPage = () => {
                     <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Ваш пароль' className='login-form-input' />
                     <div className='login-form-nav'>
                         <button type='submit' onClick={handlerSubmit} className='btn_enter'>Вхід</button>
-                        <Link to='/register' className='link'>Реєстрація</Link>
+                        <Link to='/register' className='link-login'>Реєстрація</Link>
                     </div>
                 </form>
         </div>

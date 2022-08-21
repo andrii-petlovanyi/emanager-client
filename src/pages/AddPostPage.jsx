@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import '../index.css'
@@ -14,6 +14,7 @@ export const AddPostPage = () => {
     const [imgUrl, setImg] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const { user } = useSelector((state) => state.auth) 
 
     const submitHandler = () => {
         try {
@@ -36,25 +37,31 @@ export const AddPostPage = () => {
         setBook('')
         setOff('')
     }
+
+    if (!user) {
+        return<div className='main'>Авторизуйтесь</div>
+    }
     
     return (
-        <div><form
-            className='postsEdit'
-            onSubmit={(e) => e.preventDefault()}
-        >
-            <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Модель' className='inputEdit model'></input>
-            <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='URL офф сайту' className='inputEdit'></input>
-            <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='URL посібника' className='inputEdit'></input>
-            <input type='text' value={imgUrl} onChange={(e) => setImg(e.target.value)} placeholder='URL зображення посту' className='inputEdit'></input>
-            <textarea placeholder='Інформація' value={info} onChange={(e) => setInfo(e.target.value)} className='inputEditText'></textarea>
+        <div >
+            <form
+                className='add-post'
+                onSubmit={(e) => e.preventDefault()}
+            >
+                <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Модель' className='input-form'></input>
+                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='URL офф сайту' className='input-form'></input>
+                <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='URL посібника' className='input-form'></input>
+                <input type='text' value={imgUrl} onChange={(e) => setImg(e.target.value)} placeholder='URL зображення посту' className='input-form'></input>
+                <textarea placeholder='Інформація' value={info} onChange={(e) => setInfo(e.target.value)} className='input-form-text'></textarea>
+                
             
-           
 
-            <div className='postsAddNav'>
-                <button className='postEditBtn' onClick={submitHandler}>Зберегти</button>
-                <button onClick={clearFormData} className='postClearInput'>Очистити форму</button>
-            </div>
-        </form></div>
+                <div className='add-post-nav'>
+                    <button className='post-edit-btn' onClick={submitHandler}>Зберегти</button>
+                    <button onClick={clearFormData} className='post-clear-btn'>Очистити форму</button>
+                </div>
+            </form>
+        </div>
     
         )
 }

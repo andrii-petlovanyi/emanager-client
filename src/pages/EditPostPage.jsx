@@ -1,7 +1,7 @@
 import axios from '../utils/axios';
 import React, { useEffect } from 'react';
 import { useCallback, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../index.css'
 import { updatePost } from '../redux/features/post/postSlice';
@@ -14,6 +14,7 @@ export const EditPostPage = () => {
     const [urlBook, setBook] = useState('')
     const [info, setInfo] = useState('')
     const [imgUrl, setImg] = useState('')
+    const { user } = useSelector((state) => state.auth)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -49,21 +50,25 @@ export const EditPostPage = () => {
         fetchPost()
     }, [fetchPost])
 
+    if (!user) {
+        return<div className='main'>Авторизуйтесь</div>
+    }
+
 
     return (
         <div>
             <form
-                className='postsEdit'
+                className='edit-page add-post'
                 onSubmit={(e) => e.preventDefault()}
             >
-                <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Модель' className='inputEdit model'></input>
-                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='URL офф сайту' className='inputEdit'></input>
-                <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='URL посібника' className='inputEdit'></input>
-                <input type='text' value={imgUrl} onChange={(e) => setImg(e.target.value)} placeholder='URL зображення посту' className='inputEdit'></input>
-                <textarea placeholder='Інформація' value={info} onChange={(e) => setInfo(e.target.value)} className='inputEditText'></textarea>
+                <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Модель' className='input-form'></input>
+                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='URL офф сайту' className='input-form'></input>
+                <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='URL посібника' className='input-form'></input>
+                <input type='text' value={imgUrl} onChange={(e) => setImg(e.target.value)} placeholder='URL зображення посту' className='input-form'></input>
+                <textarea placeholder='Інформація' value={info} onChange={(e) => setInfo(e.target.value)} className='input-form-text'></textarea>
                 
-                <div className='postEditNav'>
-                    <button className='postEditBtn' onClick={submitHandler}>Зберегти</button>
+                <div className='edit-page-nav'>
+                    <button className='save-btn' onClick={submitHandler}>Зберегти</button>
                 </div>
             </form>
         </div>

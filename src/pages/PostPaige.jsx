@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { AiFillDelete } from 'react-icons/ai';
 import { removePost } from '../redux/features/post/postSlice';
 import { toast } from 'react-toastify'
-import { AiOutlineRead, AiOutlineStar, AiOutlineCheck, AiOutlineFileImage, AiOutlineEdit } from 'react-icons/ai'
+import { AiOutlineRead, AiOutlineStar, AiOutlineCheck, AiOutlineFileImage, AiOutlineEdit, AiFillCaretLeft } from 'react-icons/ai'
 
 export const PostPage = () => {
 
@@ -16,6 +16,7 @@ export const PostPage = () => {
     const params = useParams()
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const { user } = useSelector((state) => state.auth)
 
     const removePostHandler = () => {
         try {
@@ -28,7 +29,6 @@ export const PostPage = () => {
     }
 
 
-    const {user} = useSelector((state) => state.auth)
 
     const fetchPost = useCallback(async () => {
         const { data } = await axios.get(`/posts/${params.id}`)
@@ -39,9 +39,13 @@ export const PostPage = () => {
         fetchPost()
     }, [fetchPost])
 
+    if (!user) {
+        return<div className='main'>Авторизуйтесь</div>
+    }
+
     if (!post) {
         return (
-            <div className="postViewMain wrapper">
+            <div className="main wrapper">
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>
@@ -49,9 +53,9 @@ export const PostPage = () => {
         )
     }
     return (
-        <div className='postViewMain'>
-            <div>
-                <button className='btn_enter'><Link className='link-item' to={'/'}>Назад</Link> </button>
+        <div className=''>
+            <div className='offer-nav'>
+                <Link to={'/posts'}><button className='btn-back'><AiFillCaretLeft size={20} /></button></Link>
             </div>
                     
             <div className="postView">
