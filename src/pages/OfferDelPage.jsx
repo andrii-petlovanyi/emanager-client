@@ -50,9 +50,7 @@ export const OfferDelPage = () => {
     if (!offer) {
         return (
             <div className="main">
-                <div className="circle"></div>
-                <div className="circle"></div>
-                <div className="circle"></div>
+                <h2>Завантаження...</h2>
             </div>
         )
     }
