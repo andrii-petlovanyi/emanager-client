@@ -593,6 +593,11 @@ body {
   margin: 10px auto;
 }
 
+.post-url a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
 .post-url {
   border: 1px solid var(--item-block-border);
   background: var(--item-block-bg);

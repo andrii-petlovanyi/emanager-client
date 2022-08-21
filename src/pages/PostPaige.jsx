@@ -68,9 +68,9 @@ export const PostPage = () => {
                     <Moment date={post.createdAt} format='D MMM YYYY' className="post-data"/>
                 </div>
                 <ul className="post-block">
-                    <li className="post-url"><span><AiOutlineCheck size={25} style={{ marginLeft: '5px', marginRight:'15px'}}/></span>{post.urlOff}</li>
-                    <li className="post-url"><span><AiOutlineRead size={25} style={{ marginLeft: '5px', marginRight:'15px'}}/></span>{post.urlBook}</li>
-                    <li className="post-url"><span><AiOutlineFileImage size={25} style={{ marginLeft: '5px', marginRight: '15px' }} /></span>{post.imgUrl}</li>
+                    <li className="post-url"><span><AiOutlineCheck size={25} style={{ marginLeft: '5px', marginRight:'15px'}}/></span><a href={post.urlOff} target='_blank' rel="noopener noreferrer">{post.urlOff}</a></li>
+                    <li className="post-url"><span><AiOutlineRead size={25} style={{ marginLeft: '5px', marginRight:'15px'}}/></span><a href={post.urlBook} target='_blank' rel="noopener noreferrer">{post.urlBook}</a></li>
+                    <li className="post-url"><span><AiOutlineFileImage size={25} style={{ marginLeft: '5px', marginRight: '15px' }} /></span><a href={post.imgUrl} target='_blank' rel="noopener noreferrer">{post.imgUrl}</a></li>
                     <li className="post-text">{post.info}</li>
                 </ul>
             </div>       

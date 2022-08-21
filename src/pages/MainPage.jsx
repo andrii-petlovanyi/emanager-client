@@ -33,7 +33,7 @@ export const MainPage = () => {
             {user?._id && posts?.map((post, idx) => (<PostItem key={idx} post={post} />))}
 
             <div className='nav-footer'>
-                    <a href='http://impam.vercel.app' rel=''>2022 &copy; A. Petlovanii</a>
+                    <a href='http://impam.vercel.app' target='_blank' rel="noopener noreferrer">2022 &copy; A. Petlovanii</a>
             </div>
         </div>
         
