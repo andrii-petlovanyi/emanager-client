@@ -50,7 +50,7 @@ export const OfferDelPage = () => {
     if (!offer) {
         return (
             <div className="main">
-                <h2>Завантаження...</h2>
+                <p>Завантаження...</p>
             </div>
         )
     }

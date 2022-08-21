@@ -9,7 +9,7 @@ export const PostItem = ({ post }) => {
     if (!post) {
         return (
             <div className="main">
-                <h2>Завантаження...</h2>
+                <p>Завантаження...</p>
             </div>
         )
     }
