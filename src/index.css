@@ -336,7 +336,7 @@ body {
   max-width: 900px;
   margin: 20px auto;
   border: 2px solid var(--item-block-border);
-  padding: 30px;
+  padding: 25px;
   border-radius: 20px;
 }
 
@@ -361,7 +361,7 @@ body {
 }
 
 .offer-del-page .offer-card {
-  min-width: 200px;
+  min-width: 150px;
 }
 
 
