@@ -24,9 +24,9 @@ export const PostItem = ({ post }) => {
                     <Moment date={post.createdAt} format='D MMM YYYY' className="post-data"/>
                 </div>
                 <ul className="post-block">
-                    <li className="post-url"><AiOutlineCheck size={25} style={{ marginLeft: '10px', marginRight:'20px'}}/>{post.urlOff}</li>
-                    <li className="post-url"><AiOutlineRead size={28} style={{ marginLeft: '10px', marginRight:'20px'}}/>{post.urlBook}</li>
-                    <li className="post-url"><AiOutlineFileImage size={22} style={{ marginLeft: '10px', marginRight: '20px' }} />{post.imgUrl}</li>
+                    <li className="post-url"><span><AiOutlineCheck size={25} style={{ marginLeft: '10px', marginRight:'20px'}}/></span>{post.urlOff}</li>
+                    <li className="post-url"><span><AiOutlineRead size={25} style={{ marginLeft: '10px', marginRight:'20px'}}/></span>{post.urlBook}</li>
+                    <li className="post-url"><span><AiOutlineFileImage size={25} style={{ marginLeft: '10px', marginRight: '20px' }} /></span>{post.imgUrl}</li>
                     <li className="post-text">{post.info}</li>
                 </ul>
         </div>

@@ -569,19 +569,20 @@ body {
 .post-block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   text-align: justify;
-  word-wrap: break-word;
   padding-left: 0;
 }
 
 .post-block li {
-  list-style: none;
-  line-height: 2;
-  padding: 15px 10px;
   display: flex;
   align-items: center;
-  word-wrap: break-word;
+  list-style: none;
+  word-break: break-all;
+}
+
+.post-url > p {
+  margin: 10px auto;
 }
 
 .post-url {
@@ -589,6 +590,8 @@ body {
   background: var(--item-block-bg);
   border-radius: 10px;
   margin: 10px 0;
+  padding: 15px;
+
 }
 
 .post-text {
@@ -596,7 +599,7 @@ body {
   background: var(--post-text-bg-color);
   opacity: .9;
   border-radius: 10px;
-  padding: 0 15px;
+  padding: 20px;
   margin: 10px auto;
 }
 
