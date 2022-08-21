@@ -5,6 +5,7 @@ import axios from '../utils/axios';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 export const PostsPage = () => {
+
     const [posts, setPosts] = useState([])
     const fetchMyPosts = async () => {
         try {
@@ -16,16 +17,15 @@ export const PostsPage = () => {
     }
 
     const [value, setValue] = useState('')
-
     const filterPost = posts.filter(post => {
         return post.model.includes(value)
     })
-
+    
     useEffect(() => {
         fetchMyPosts()
     }, [])
 
-    return (<div>
+    return (<div className='main'>
         <div className='search-block'><AiOutlineSearch size={30} style={{ transform: 'rotate(90deg)', marginRight: '5px' }}/><input type='text' placeholder='Вводь модель для пошуку...' onChange={(e) => setValue(e.target.value)} className='search'/></div>
         {filterPost?.map((post, idx) => <PostItem post={post} key={idx} />)}
     </div>)

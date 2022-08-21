@@ -36,6 +36,7 @@ body {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3.3%;
   text-align: center;
   justify-content: center;
   flex-direction: column;
@@ -332,7 +333,10 @@ body {
 
 /* // Offers Delete page // */
 .offer-del-page {
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 325px;
   margin: 20px auto;
   border: 2px solid var(--item-block-border);
   padding: 25px;
@@ -354,29 +358,22 @@ body {
   color: var(--label-text-color);
 }
 
-.offer-nav {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .offer-del-page .offer-nav:nth-child(3) {
   display: flex;
   justify-content: flex-end;
 }
 
-.offer-del-page .offer-card {
-  min-width: 150px;
-}
-
 
 /* // Add post page // */
+.add-post-page {
+  max-width: 800px;
+  min-width: 200px;
+  margin: 3.3% auto;
+}
 
 .add-post {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
-  min-width: 200px;
-  margin: 20px auto;
   background: rgba(237, 239, 239, 0.05);
   border-radius: 15px;
   border: 1px solid rgba(241, 241, 244, 0.15);
@@ -455,6 +452,10 @@ body {
 }
 
 /* // Edit post page // */
+.edit-page {
+  margin-top: 3.3%;
+}
+
 .edit-page-nav {
   display: flex;
   justify-content: right;
@@ -538,12 +539,11 @@ body {
 }
 
 .post-item {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 3.3%;
   background: var(--item-block-bg);
   border-radius: 15px;
   border: 1px solid var(--item-block-border);
-  padding: 25px 30px;
+  padding: 15px 20px;
 }
 
 .post-header {
@@ -572,6 +572,7 @@ body {
   align-items: flex-start;
   text-align: justify;
   padding-left: 0;
+  margin-top: 0;
 }
 
 .post-block li {
@@ -602,6 +603,56 @@ body {
   padding: 20px;
   margin: 10px auto;
 }
+
+.post-full-page {
+  margin-top: 2.1%;
+}
+
+.post-full-item {
+  margin-top: 2.2%;
+}
+
+.post-full-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.post-full-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* // Search post page // */
+.search {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid grey;
+  width: 70%;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.search-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.3%;
+}
+
+.searchLogo {
+  transform: scaleX(-1);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -669,27 +720,7 @@ body {
 
 
 
-.search {
-  border-radius: 10px;
-  padding: 10px;
-  border: 2px solid grey;
-  width: 70%;
-  margin-left: 5px;
-  font-size: 16px;
-}
 
-.search-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.searchLogo {
-  transform: scaleX(-1);
-}
 
 
 

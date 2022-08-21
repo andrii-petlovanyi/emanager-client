@@ -56,9 +56,9 @@ export const EditPostPage = () => {
 
 
     return (
-        <div>
+        <div className='main edit-page'>
             <form
-                className='edit-page add-post'
+                className='add-post'
                 onSubmit={(e) => e.preventDefault()}
             >
                 <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Модель' className='input-form'></input>

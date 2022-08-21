@@ -8,7 +8,7 @@ import { AiOutlineRead, AiOutlineStar, AiOutlineCheck, AiOutlineFileImage } from
 export const PostItem = ({ post }) => {
     if (!post) {
         return (
-            <div className="postViewMain wrapper">
+            <div className="main wrapper">
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>

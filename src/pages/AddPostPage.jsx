@@ -43,7 +43,7 @@ export const AddPostPage = () => {
     }
     
     return (
-        <div >
+        <div className='add-post-page'>
             <form
                 className='add-post'
                 onSubmit={(e) => e.preventDefault()}

@@ -53,28 +53,28 @@ export const PostPage = () => {
         )
     }
     return (
-        <div className=''>
-            <div className='offer-nav'>
+        <div className='main post-full-page'>
+            <div className='post-full-nav'>
                 <Link to={'/posts'}><button className='btn-back'><AiFillCaretLeft size={20} /></button></Link>
             </div>
                     
-            <div className="postView">
-                <div className="postHeader">
-                    <h3 className="postTitle"><AiOutlineStar size={25} style={{ marginRight:'10px'}} />{post.model}</h3>
-                    <Moment date={post.createdAt} format='D MMM YYYY' className="postData"/>
+            <div className="post-item post-full-item">
+                <div className="post-header">
+                    <h3 className="post-title"><AiOutlineStar size={25} style={{ marginRight:'10px'}} />{post.model}</h3>
+                    <Moment date={post.createdAt} format='D MMM YYYY' className="post-data"/>
                 </div>
-                <div className="postBlock">
-                    <div className="postBlockUrl"><a href={post.urlOff} rel='noreferrer noopener' target='_blank'><AiOutlineCheck size={25} style={{ marginRight:'10px'}}/>{post.urlOff}</a></div>
-                    <div className="postBlockUrl"><a href={post.urlBook} rel='noreferrer noopener' target='_blank'><AiOutlineRead size={25} style={{ marginRight: '10px' }} />{post.urlBook}</a></div>
-                    <div className="postBlockUrl"><a href={post.imgUrl} rel='noreferrer noopener' target='_blank'><AiOutlineFileImage size={25} style={{ marginRight:'10px'}}/>{post.imgUrl}</a></div>
-                    <div className="postText"><p>{post.info}</p></div>
-                </div>
+                <ul className="post-block">
+                    <li className="post-url"><span><AiOutlineCheck size={25} style={{ marginLeft: '10px', marginRight:'20px'}}/></span>{post.urlOff}</li>
+                    <li className="post-url"><span><AiOutlineRead size={25} style={{ marginLeft: '10px', marginRight:'20px'}}/></span>{post.urlBook}</li>
+                    <li className="post-url"><span><AiOutlineFileImage size={25} style={{ marginLeft: '10px', marginRight: '20px' }} /></span>{post.imgUrl}</li>
+                    <li className="post-text">{post.info}</li>
+                </ul>
             </div>       
             <div>
                 {
                 user?._id === post.author && (
-                    <div className='btnViewNav'>
-                        <button className='btn-edit'><Link to={`/${params.id}/edit`}><AiOutlineEdit size={20} style={{ color:'#fff'}} /></Link></button>
+                    <div className='post-full-nav'>
+                        <Link to={`/${params.id}/edit`}><button className='btn-edit'><AiOutlineEdit size={20} style={{ color:'#fff'}} /></button></Link>
                         <button className='btn-del' onClick={removePostHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
                     </div>
                     )

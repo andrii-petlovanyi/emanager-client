@@ -63,9 +63,9 @@ export const OfferDelPage = () => {
                 <li className="offer-initials"><label>Прізвище: </label>{offer.LastName}</li>
                 <li className="offer-initials"><label>Нікнейм: </label>{}</li>
             </ul>       
-                <div className='offer-nav'>
-                    <button className='btn-del' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
-                </div>
+            <div className='offer-nav'>
+                <button className='btn-del' onClick={removeOfferHandler}><AiFillDelete size={20} style={{ color:'#fff'}}/></button>
+            </div>
         </div>
         )
 }

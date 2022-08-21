@@ -10,7 +10,7 @@ export const OfferItem = ({ offer }) => {
 
     if (!offer) {
         return (
-            <div className="postViewMain wrapper">
+            <div className="main wrapper">
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>

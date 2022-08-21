@@ -26,7 +26,7 @@ export const MainPage = () => {
     
 
     return (
-        <div>
+        <div className='main'>
             {user?._id && posts?.map((post, idx) => (<PostItem key={idx} post={post} />))}
         </div>
         )
