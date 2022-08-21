@@ -593,7 +593,7 @@ body {
 
 .post-text {
   border: 1px solid var(--item-block-border);
-  background: ;
+  background: var(--post-text-bg-color);
   opacity: .9;
   border-radius: 10px;
   padding: 0 15px;
