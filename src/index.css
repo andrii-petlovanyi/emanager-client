@@ -94,7 +94,7 @@ body {
 }
 
 .nav-login nav {
-  margin-left: 11%;
+  margin-left: 10%;
 }
 
 .nav-block-btn {
@@ -296,6 +296,7 @@ body {
 .offer-card {
   width: 250px;
   margin: 0 20px;
+  margin-bottom: 30px;
   padding: 10px 15px;
   display: flex;
   flex-direction:column;
@@ -345,6 +346,10 @@ body {
   border: 2px solid var(--item-block-border);
   padding: 25px;
   border-radius: 20px;
+}
+
+.offer-del-page .btn-back {
+  margin-bottom: 25px;
 }
 
 .offer-del-page li:nth-child(1) {
