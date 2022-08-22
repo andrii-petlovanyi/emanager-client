@@ -54,7 +54,7 @@ export const AddPostPage = () => {
                 <label>Модель :</label>
                 <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Введи модель' className='input-form' />
                 <label>Посилання на офіційний сайт :</label>
-                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='Ввнди URL офф. сайту' className='input-form' />
+                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='Введи URL офф. сайту' className='input-form' />
                 <label>Посилання на посібник :</label>
                 <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='Введи URL посібника' className='input-form' />
                 <label>Посилання на зображення допису :</label>
