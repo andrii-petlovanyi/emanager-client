@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { OfferItem } from '../components/OfferItem';
 import '../index.css';
 import { getAllOffer } from '../redux/features/offer/offerSlice';
-import { Footer } from '../components/Footer';
 
 
 
@@ -20,9 +19,8 @@ export const OffersPage = () => {
 
  if (!user) {
         return <div className='main wrapper'>
-            <span className='top'>Авторизуйтесь</span>
-            <Footer/>
-        </div>
+                    <span className='top'>Авторизуйтесь</span>
+                </div>
     }
 
     if (!offers.length) {

@@ -40,6 +40,6 @@ export const LoginPage = () => {
                         <button type='submit' onClick={handlerSubmit} className='btn_enter'>Вхід</button>
                         <Link to='/register' className='link-login'>Реєстрація</Link>
                     </div>
-                </form>
+            </form>
             </div>
 )}

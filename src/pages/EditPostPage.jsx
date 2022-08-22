@@ -6,7 +6,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import '../index.css'
 import { updatePost } from '../redux/features/post/postSlice';
 import { toast } from 'react-toastify';
-import { Footer } from '../components/Footer';
 
 export const EditPostPage = () => {
 
@@ -54,7 +53,6 @@ export const EditPostPage = () => {
     if (!user) {
         return <div className='main wrapper'>
             <span className='top'>Авторизуйтесь</span>
-            <Footer/>
         </div>
     }
 
@@ -65,11 +63,16 @@ export const EditPostPage = () => {
                 className='add-post'
                 onSubmit={(e) => e.preventDefault()}
             >
-                <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Модель' className='input-form'></input>
-                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='URL офф сайту' className='input-form'></input>
-                <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='URL посібника' className='input-form'></input>
-                <input type='text' value={imgUrl} onChange={(e) => setImg(e.target.value)} placeholder='URL зображення посту' className='input-form'></input>
-                <textarea placeholder='Інформація' value={info} onChange={(e) => setInfo(e.target.value)} className='input-form-text'></textarea>
+                <label>Модель :</label>
+                <input type='text' value={model} onChange={(e) => setModel(e.target.value)} placeholder='Введи модель' className='input-form' />
+                <label>Посилання на офіційний сайт :</label>
+                <input type='text' value={urlOff} onChange={(e) => setOff(e.target.value)} placeholder='Ввнди URL офф. сайту' className='input-form' />
+                <label>Посилання на посібник :</label>
+                <input type='text' value={urlBook} onChange={(e) => setBook(e.target.value)} placeholder='Введи URL посібника' className='input-form' />
+                <label>Посилання на зображення допису :</label>
+                <input type='text' value={imgUrl} onChange={(e) => setImg(e.target.value)} placeholder=' Введи URL зображення посту' className='input-form' />
+                <label>Текст допису :</label>
+                <textarea placeholder='Введи текст допису' value={info} onChange={(e) => setInfo(e.target.value)} className='input-form-text'/>
                 
                 <div className='edit-page-nav'>
                     <button className='save-btn' onClick={submitHandler}>Зберегти</button>

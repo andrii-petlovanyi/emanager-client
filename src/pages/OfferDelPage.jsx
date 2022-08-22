@@ -9,7 +9,6 @@ import { removeOffer } from '../redux/features/offer/offerSlice';
 import { toast } from 'react-toastify'
 import { AiFillCaretLeft } from 'react-icons/ai';
 import Moment from 'react-moment';
-import { Footer } from '../components/Footer';
 
 export const OfferDelPage = () => {
 
@@ -42,9 +41,8 @@ export const OfferDelPage = () => {
 
     if (!user) {
         return <div className='main wrapper'>
-            <span className='top'>Авторизуйтесь</span>
-            <Footer/>
-        </div>
+                    <span className='top'>Авторизуйтесь</span>
+                </div>
     }
 
     if (!offer) {

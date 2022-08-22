@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { AiFillDelete } from 'react-icons/ai';
 import { removePost } from '../redux/features/post/postSlice';
 import { toast } from 'react-toastify'
-import { Footer } from '../components/Footer';
 import { AiOutlineRead, AiOutlineStar, AiOutlineCheck, AiOutlineFileImage, AiOutlineEdit, AiFillCaretLeft } from 'react-icons/ai'
 
 export const PostPage = () => {
@@ -42,9 +41,8 @@ export const PostPage = () => {
 
     if (!user) {
         return <div className='main wrapper'>
-            <span className='top'>Авторизуйтесь</span>
-            <Footer/>
-        </div>
+                    <span className='top'>Авторизуйтесь</span>
+                </div>
     }
 
     if (!post) {
