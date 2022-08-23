@@ -43,7 +43,8 @@ export const Navbar = () => {
                             to={"/"}
                             href='/'
                             className='link'
-                            style={({isActive}) => isActive ? activeStyle : undefined}
+                            style={({ isActive }) => isActive ? activeStyle : undefined}
+                            onClick={showNavbar}
                         >Головна
                         </NavLink>
                     
@@ -52,6 +53,7 @@ export const Navbar = () => {
                             href="/"
                             className='link'
                             style={({ isActive }) => isActive ? activeStyle : undefined}
+                            onClick={showNavbar}
                         >Записи</NavLink>
                     
                         <NavLink
@@ -59,6 +61,7 @@ export const Navbar = () => {
                             href="/"
                             className='link'
                             style={({ isActive }) => isActive ? activeStyle : undefined}
+                            onClick={showNavbar}
                         >Додати запис</NavLink>
                 
                         <NavLink
@@ -66,6 +69,7 @@ export const Navbar = () => {
                             href="/"
                             className='link'
                             style={({ isActive }) => isActive ? activeStyle : undefined}
+                            onClick={showNavbar}
                             >Прохання</NavLink>
                             
                         <button onClick={logoutHandler} className='btn-out'>Вихід</button>

@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     dispatch(getMe())
   }, [dispatch])
-  
+
   return (
     <Layout> 
       <Routes>
@@ -43,7 +43,7 @@ function App() {
 
       <ToastContainer position='bottom-right' />
     </Layout>
-  );
+  )
 }
 
 export default App;

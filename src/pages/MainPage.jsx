@@ -21,16 +21,16 @@ export const MainPage = () => {
         shortPosts.push(posts[i])
     }
 
-
-    if (!posts.length ) {
-        return (<div className='main'>Записи відсутні</div>)
-    }
-    
     if (!user) {
         return <div className='main wrapper'>
             <span className='top'>Авторизуйтесь</span>
         </div>
     }
+
+    if (!posts.length ) {
+        return (<div className='main'>Записи відсутні</div>)
+    }
+    
 
     return (
         <div className='main'>
