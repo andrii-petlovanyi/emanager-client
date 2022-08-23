@@ -10,7 +10,7 @@ export const PostsPage = () => {
     const fetchMyPosts = async () => {
         try {
             const { data } = await axios.get('/posts/user/me')
-            setPosts(data)
+            setPosts(data.reverse())
         } catch (error) {
             console.log(error)
         }

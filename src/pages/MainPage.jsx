@@ -9,17 +9,20 @@ import { getAllPost } from '../redux/features/post/postSlice';
 export const MainPage = () => {
 
     const { posts } = useSelector((state) => state.post)
-    const { user } = useSelector((state) => state.auth) 
+    const { user } = useSelector((state) => state.auth)
     const dispatch = useDispatch()
-    
-    
             
     useEffect(() => {
-         dispatch(getAllPost())
+        dispatch(getAllPost())
     }, [dispatch])
-    
 
-    if (!posts.length) {
+    const shortPosts = [];
+    for (let i = 0; i < 10; i++) {
+        shortPosts.push(posts[i])
+    }
+
+
+    if (!posts.length ) {
         return (<div className='main'>Записи відсутні</div>)
     }
     
@@ -31,8 +34,11 @@ export const MainPage = () => {
 
     return (
         <div className='main'>
-            {user?._id && posts?.map((post, idx) => (<PostItem key={idx} post={post} />))}
+            {user?._id && shortPosts?.map((post, idx) => (<PostItem key={idx} post={post} />))}
         </div>
         
         )
 }
+
+    
+
