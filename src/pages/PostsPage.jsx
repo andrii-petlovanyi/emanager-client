@@ -23,7 +23,7 @@ export const PostsPage = () => {
 
 
     const filterPost = posts.filter(post => {
-        return post.model.includes(value)
+        return post.model.includes(value.toLowerCase())
     })
 
     return (<div className='main'>
