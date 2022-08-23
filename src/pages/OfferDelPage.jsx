@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from '../utils/axios';
 import '../index.css'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { AiFillDelete } from 'react-icons/ai';
 import { removeOffer } from '../redux/features/offer/offerSlice';
 import { toast } from 'react-toastify'
@@ -16,7 +16,6 @@ export const OfferDelPage = () => {
     const params = useParams()
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { user } = useSelector((state) => state.auth) 
 
     const removeOfferHandler = () => {
         try {
@@ -39,11 +38,6 @@ export const OfferDelPage = () => {
         fetchOffer()
     }, [fetchOffer])
 
-    if (!user) {
-        return <div className='main wrapper'>
-                    <span className='top'>Авторизуйтесь</span>
-                </div>
-    }
 
     if (!offer) {
         return (

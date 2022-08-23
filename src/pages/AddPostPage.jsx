@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import '../index.css'
@@ -14,7 +14,7 @@ export const AddPostPage = () => {
     const [imgUrl, setImg] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { user } = useSelector((state) => state.auth) 
+    
 
     const submitHandler = () => {
         try {
@@ -38,12 +38,8 @@ export const AddPostPage = () => {
         setOff('')
         setImg('')
     }
-
-    if (!user) {
-        return <div className='main wrapper'>
-            <span className='top'>Авторизуйтесь</span>
-        </div>
-    }
+    
+    
     
     return (
         <div className='add-post-page'>
@@ -72,5 +68,7 @@ export const AddPostPage = () => {
 
         
     
-        )
+    )
+    
+   
 }

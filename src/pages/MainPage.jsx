@@ -7,24 +7,27 @@ import { getAllPost } from '../redux/features/post/postSlice';
 
 
 export const MainPage = () => {
-    
-    const dispatch = useDispatch()
+
     const { posts } = useSelector((state) => state.post)
     const { user } = useSelector((state) => state.auth) 
+    const dispatch = useDispatch()
+    
+    
             
     useEffect(() => {
          dispatch(getAllPost())
     }, [dispatch])
+    
+
+    if (!posts.length) {
+        return (<div className='main'>Записи відсутні</div>)
+    }
     
     if (!user) {
         return <div className='main wrapper'>
             <span className='top'>Авторизуйтесь</span>
         </div>
     }
-
-    if (!posts.length) {
-        return <div className='main'>Записи відсутні</div>
-    }    
 
     return (
         <div className='main'>

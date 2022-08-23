@@ -1,6 +1,6 @@
 import React, { useRef }  from 'react';
 import '../index.css'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {  checkIsAuth, logout } from '../redux/features/auth/authSlice'
 import { toast } from 'react-toastify'
@@ -11,6 +11,7 @@ export const Navbar = () => {
 
     const isAuth = useSelector(checkIsAuth)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const navRef = useRef();
     const showNavbar = () => {
@@ -24,6 +25,7 @@ export const Navbar = () => {
     const logoutHandler = () => {
         dispatch(logout())
         window.localStorage.removeItem('token')
+        navigate('/')
         toast('Ви вийшли з системи')
     }
 

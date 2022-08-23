@@ -17,11 +17,6 @@ export const OffersPage = () => {
     }, [dispatch])
     
 
- if (!user) {
-        return <div className='main wrapper'>
-                    <span className='top'>Авторизуйтесь</span>
-                </div>
-    }
 
     if (!offers.length) {
         return <div className='main'>Записи відсутні</div>

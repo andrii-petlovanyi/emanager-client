@@ -1,7 +1,7 @@
 import axios from '../utils/axios';
 import React, { useEffect } from 'react';
 import { useCallback, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../index.css'
 import { updatePost } from '../redux/features/post/postSlice';
@@ -14,7 +14,6 @@ export const EditPostPage = () => {
     const [urlBook, setBook] = useState('')
     const [info, setInfo] = useState('')
     const [imgUrl, setImg] = useState('')
-    const { user } = useSelector((state) => state.auth)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -49,12 +48,6 @@ export const EditPostPage = () => {
     useEffect(() => {
         fetchPost()
     }, [fetchPost])
-
-    if (!user) {
-        return <div className='main wrapper'>
-            <span className='top'>Авторизуйтесь</span>
-        </div>
-    }
 
 
     return (
