@@ -25,20 +25,19 @@ body {
   background: #283958;
   background: -webkit-linear-gradient(to right, #243B55, #141E30);
   background: linear-gradient(to right, #243B55, #141E30);
-  min-height: 100vh;
+  height: 100vh;
   color: var(--main-text-color);
 }
 
 
 /* // Main block // */
-.main {
+main {
   max-width: 1000px;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
+  width: 100%;
+  flex: 1 1 auto;
+  margin: 30px auto;
   text-align: center;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -113,6 +112,7 @@ body {
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
+  padding-top: 2px;
 }
 
 .nav-login .btn_enter {
@@ -175,7 +175,7 @@ body {
 
   .nav-login .nav-close-btn {
     position: absolute;
-    top: 2.74rem;
+    top: 3.24rem;
     right: 1.8rem;
     font-size: 1.8rem;
     padding: 0 10px;
@@ -288,7 +288,6 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 980px;
-  margin: 30px auto;
 }
 
 /* // Offer Item card on Offers page// */
@@ -341,8 +340,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
   max-width: 325px;
-  margin: 30px auto;
   border: 2px solid var(--item-block-border);
   padding: 25px;
   border-radius: 20px;
@@ -350,6 +349,7 @@ body {
 
 .offer-del-page .btn-back {
   margin-bottom: 25px;
+  
 }
 
 .offer-del-page li:nth-child(1) {
@@ -375,9 +375,6 @@ body {
 
 /* // Add post page // */
 .add-post-page {
-  max-width: 800px;
-  min-width: 200px;
-  margin: 30px auto;
 }
 
 .add-post {
@@ -468,7 +465,7 @@ body {
 
 /* // Edit post page // */
 .edit-page {
-  margin-top: 30px;
+
 }
 
 .edit-page-nav {
@@ -496,7 +493,7 @@ body {
 
 .login-page {
   max-width: 450px;
-  margin: 7% auto;
+  margin: 3% auto;
   padding: 20px 30px;
   display: flex;
   justify-content: center;
@@ -629,7 +626,7 @@ body {
 }
 
 .post-full-page {
-  margin-top: 30px;
+  margin-top: -20px;
 }
 
 .post-full-item {
@@ -663,11 +660,16 @@ body {
 }
 
 .search-block {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  margin-top: -20px;
+}
+.test {
+  width: 100%;
 }
 
 .searchLogo {
@@ -682,7 +684,6 @@ body {
   align-items: center;
   margin: 30px auto;
   border-radius: 10px;
-  height: 40px;
 }
 
 .nav-footer a {
@@ -693,11 +694,6 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 73vh;
+  min-height: 100vh;
 }
-
-.top {
-  flex-grow: 1;
-}
-
 
