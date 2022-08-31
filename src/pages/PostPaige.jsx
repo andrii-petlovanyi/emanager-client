@@ -47,7 +47,7 @@ export const PostPage = () => {
   }
   return (
     <main>
-      <div className="post-full-page">
+      <section className="post-full-page">
         <div className="post-full-nav">
           <Link to={"/posts"}>
             <button className="btn-back">
@@ -70,34 +70,31 @@ export const PostPage = () => {
           </div>
           <ul className="post-block">
             <li className="post-url">
-              <span>
-                <AiOutlineCheck
-                  size={25}
-                  style={{ marginLeft: "5px", marginRight: "15px" }}
-                />
-              </span>
+              <AiOutlineCheck
+                className={"url-img"}
+                size={25}
+                style={{ marginLeft: "5px", marginRight: "15px" }}
+              />
               <a href={post.urlOff} target="_blank" rel="noopener noreferrer">
                 {post.urlOff}
               </a>
             </li>
             <li className="post-url">
-              <span>
-                <AiOutlineRead
-                  size={25}
-                  style={{ marginLeft: "5px", marginRight: "15px" }}
-                />
-              </span>
+              <AiOutlineRead
+                className={"url-img"}
+                size={25}
+                style={{ marginLeft: "5px", marginRight: "15px" }}
+              />
               <a href={post.urlBook} target="_blank" rel="noopener noreferrer">
                 {post.urlBook}
               </a>
             </li>
             <li className="post-url">
-              <span>
-                <AiOutlineFileImage
-                  size={25}
-                  style={{ marginLeft: "5px", marginRight: "15px" }}
-                />
-              </span>
+              <AiOutlineFileImage
+                className={"url-img"}
+                size={25}
+                style={{ marginLeft: "5px", marginRight: "15px" }}
+              />
               <a href={post.imgUrl} target="_blank" rel="noopener noreferrer">
                 {post.imgUrl}
               </a>
@@ -119,7 +116,7 @@ export const PostPage = () => {
             </div>
           )}
         </div>
-      </div>
+      </section>
     </main>
   );
 };

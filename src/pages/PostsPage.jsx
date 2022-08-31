@@ -38,8 +38,8 @@ export const PostsPage = () => {
         />
       </div>
       {filterPost?.map((post, idx) => (
-          <PostItem post={post} key={idx} />
-        ))}
+        <PostItem post={post} key={idx} />
+      ))}
     </main>
   );
 };

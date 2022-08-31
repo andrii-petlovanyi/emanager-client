@@ -1,13 +1,12 @@
 :root {
   --main-text-color: white;
-  --accent-color: #9B75A9;
+  --accent-color: #9b75a9;
   --accent-color-opacity: #8e749799;
-  
-  
+
   --background-main-color: rgba(166, 168, 168, 15%);
-  --box-main-color: #7687B0;
+  --box-main-color: #7687b0;
   --box-main-light: #5767aa22;
-  
+
   --hover-button-color: grey;
   --secondary-hover-color: #db2b39;
 
@@ -15,20 +14,17 @@
   --item-block-border: #f1f1f426;
 
   --label-text-color: rgba(203, 165, 233, 0.933);
-  --post-text-bg-color: #7687B055;
-
+  --post-text-bg-color: #7687b055;
 }
 
-
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #283958;
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);
-  background: linear-gradient(to right, #243B55, #141E30);
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, #141e30);
   height: 100vh;
   color: var(--main-text-color);
 }
-
 
 /* // Main block // */
 main {
@@ -41,7 +37,6 @@ main {
   flex-direction: column;
 }
 
-
 /* //  Navigation/Header/Burger   // */
 
 .logo {
@@ -49,7 +44,7 @@ main {
   text-align: center;
   vertical-align: middle;
   font-weight: 700;
-  opacity: .9;
+  opacity: 0.9;
   font-size: 20px;
 }
 
@@ -65,7 +60,6 @@ main {
   height: 40px;
   border: 1px solid rgba(241, 241, 244, 0.15);
 }
-
 
 .nav-login {
   max-width: 1000px;
@@ -103,7 +97,7 @@ main {
 
 .nav-login .nav-btn {
   padding: 0 10px;
-  cursor: pointer; 
+  cursor: pointer;
   background: rgba(166, 168, 168, 13%);
   border-radius: 3px;
   margin: 0;
@@ -118,7 +112,6 @@ main {
 .nav-login .btn_enter {
   visibility: visible;
   order: 2;
-
 }
 
 .nav-btn:hover,
@@ -190,7 +183,7 @@ main {
   margin-right: 20px;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: var(--main-text-color);
 }
@@ -298,7 +291,7 @@ main {
   margin-bottom: 30px;
   padding: 10px 15px;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   background: var(--item-block-bg);
   border-radius: 15px;
   border: 1px solid var(--item-block-border);
@@ -328,12 +321,11 @@ main {
 .offer-initials {
   border: 1px solid var(--item-block-border);
   background: var(--item-block-bg);
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 10px;
   padding: 15px 20px;
   margin: 10px auto;
 }
-
 
 /* // Offers Delete page // */
 .offer-del-page {
@@ -349,7 +341,6 @@ main {
 
 .offer-del-page .btn-back {
   margin-bottom: 25px;
-  
 }
 
 .offer-del-page li:nth-child(1) {
@@ -371,7 +362,6 @@ main {
   display: flex;
   justify-content: flex-end;
 }
-
 
 /* // Add post page // */
 .add-post-page {
@@ -444,7 +434,6 @@ main {
   border: 1px solid var(--hover-button-color);
 }
 
-
 .add-post-nav .post-clear-btn {
   padding: 10px;
   margin-top: 10px;
@@ -465,7 +454,6 @@ main {
 
 /* // Edit post page // */
 .edit-page {
-
 }
 
 .edit-page-nav {
@@ -501,7 +489,6 @@ main {
   background: var(--item-block-bg);
   border-radius: 15px;
   border: 1px solid var(--item-block-border);
-
 }
 
 .login-form {
@@ -605,6 +592,11 @@ main {
 .post-url a {
   color: var(--main-text-color);
   text-decoration: none;
+  vertical-align: middle;
+}
+
+.post-url .url-img {
+  vertical-align: middle;
 }
 
 .post-url {
@@ -613,13 +605,12 @@ main {
   border-radius: 10px;
   margin: 10px 0;
   padding: 15px;
-
 }
 
 .post-text {
   border: 1px solid var(--item-block-border);
   background: var(--post-text-bg-color);
-  opacity: .9;
+  opacity: 0.9;
   border-radius: 10px;
   padding: 20px;
   margin: 10px auto;
@@ -643,7 +634,6 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-
 
 /* // Search post page // */
 .search {
@@ -696,4 +686,3 @@ main {
   flex-direction: column;
   min-height: 100vh;
 }
-

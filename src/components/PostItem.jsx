@@ -34,30 +34,27 @@ export const PostItem = ({ post }) => {
         </div>
         <ul className="post-block">
           <li className="post-url">
-            <span>
-              <AiOutlineCheck
-                size={25}
-                style={{ marginLeft: "5px", marginRight: "15px" }}
-              />
-            </span>
+            <AiOutlineCheck
+              className={"url-img"}
+              size={25}
+              style={{ marginLeft: "5px", marginRight: "15px" }}
+            />
             {post.urlOff}
           </li>
           <li className="post-url">
-            <span>
-              <AiOutlineRead
-                size={25}
-                style={{ marginLeft: "5px", marginRight: "15px" }}
-              />
-            </span>
+            <AiOutlineRead
+              className={"url-img"}
+              size={25}
+              style={{ marginLeft: "5px", marginRight: "15px" }}
+            />
             {post.urlBook}
           </li>
           <li className="post-url">
-            <span>
-              <AiOutlineFileImage
-                size={25}
-                style={{ marginLeft: "5px", marginRight: "15px" }}
-              />
-            </span>
+            <AiOutlineFileImage
+              className={"url-img"}
+              size={25}
+              style={{ marginLeft: "5px", marginRight: "15px" }}
+            />
             {post.imgUrl}
           </li>
           <li className="post-text">{post.info}</li>
