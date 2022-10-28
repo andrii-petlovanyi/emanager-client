@@ -9,7 +9,8 @@ export const PostsPage = () => {
   const fetchMyPosts = async () => {
     try {
       const { data } = await axios.get("/posts/user/me");
-      setPosts(data.reverse());
+      const reverseData = data.reverse();
+      setPosts(reverseData);
     } catch (error) {
       console.log(error);
     }
@@ -37,7 +38,7 @@ export const PostsPage = () => {
           className="search"
         />
       </div>
-      {filterPost?.map((post, idx) => (
+      {filterPost?.slice(0, 5).map((post, idx) => (
         <PostItem post={post} key={idx} />
       ))}
     </main>

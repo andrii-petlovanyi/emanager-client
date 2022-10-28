@@ -93,6 +93,7 @@ main {
 .nav-block-btn {
   display: flex;
   justify-content: center;
+  flex-direction: row-reverse;
 }
 
 .nav-login .nav-btn {
@@ -111,7 +112,6 @@ main {
 
 .nav-login .btn_enter {
   visibility: visible;
-  order: 2;
 }
 
 .nav-btn:hover,
@@ -124,10 +124,13 @@ main {
 }
 
 @media only screen and (max-width: 1024px) {
+  .nav-block-btn {
+    flex-direction: row;
+  }
+
   .nav-login .nav-btn {
     visibility: visible;
     opacity: 1;
-    order: 2;
   }
 
   .nav-login .btn-out {

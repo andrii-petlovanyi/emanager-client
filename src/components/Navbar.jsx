@@ -34,7 +34,7 @@ export const Navbar = () => {
       {isAuth && (
         <div className="nav-login">
           <span className="logo">EManager</span>
-          <nav ref={navRef}>
+          <nav className="navigation" ref={navRef}>
             <NavLink
               to={"/"}
               href="/"

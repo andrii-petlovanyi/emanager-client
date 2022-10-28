@@ -17,7 +17,6 @@ export const LoginPage = () => {
     if (status) toast(status.message);
     if (isAuth) {
       navigate("/");
-      toast("Вхід виконано");
     }
   }, [status, isAuth, navigate]);
 
@@ -26,7 +25,6 @@ export const LoginPage = () => {
       dispatch(loginUser({ username, password }));
     } catch (error) {
       console.log(error);
-      toast("Не вірні дані");
     }
   };
 
