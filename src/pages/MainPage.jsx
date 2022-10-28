@@ -13,7 +13,7 @@ export const MainPage = () => {
     dispatch(getAllPost());
   }, [dispatch]);
 
-  const shortPosts = [];
+  let shortPosts = [];
   for (let i = 0; i < 10; i++) {
     shortPosts.push(posts[i]);
   }
