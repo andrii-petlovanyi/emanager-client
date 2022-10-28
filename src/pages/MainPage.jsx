@@ -13,11 +13,6 @@ export const MainPage = () => {
     dispatch(getAllPost());
   }, [dispatch]);
 
-  let shortPosts = [];
-  for (let i = 0; i < 10; i++) {
-    shortPosts.push(posts[i]);
-  }
-
   if (!user) {
     return <main>Авторизуйтесь</main>;
   }
@@ -26,6 +21,10 @@ export const MainPage = () => {
     return <main>Записи відсутні</main>;
   }
 
+  let shortPosts = [];
+  for (let i = 0; i < 10; i++) {
+    shortPosts.push(posts[i]);
+  }
   return (
     <main>
       {user?._id &&
