@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://emanager-server.onrender.com/api",
+  baseURL: "http://91.231.182.50:3002/api",
 });
 
 instance.interceptors.request.use((config) => {
